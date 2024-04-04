@@ -1,0 +1,6 @@
+Código: 5, Nome: Bolacha, Descrição: , Quantidade: 5, Preço: 10.0
+Código: 10, Nome: Bolacha, Descrição: Alimenticio, Quantidade: 10, Preço: 15.0
+Código: 5, Nome: Pc, Descrição: Computador, Quantidade: 5, Preço: 1200.0
+Código: 50, Nome: Notebook, Descrição: Eletronico, Quantidade: 10, Preço: 2500.0, Marca: Samsung, Modelo: inspiron
+Código: 50, Nome: Celular, Descrição: eletronico, Quantidade: 50, Preço: 50.0
+Código: 50, Nome: Celular, Descrição: Eletronico, Quantidade: 5, Preço: 12500.0, Marca: Sansumg, Modelo: A30
