@@ -8,7 +8,7 @@ public class manClass {
 
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("Seja Bem vindo ao mercado.");
 		System.out.println();
 		// produto
@@ -24,10 +24,11 @@ public class manClass {
 			System.out.println("3 - Cadastrar Eletronico. ");
 			System.out.println("4 - Sair do programa. ");
 			System.out.print("Escreva: ");
-			System.out.println();
+			
 			int opcao;
 
 			opcao = sc.nextInt();
+			System.out.println();
 
 			switch (opcao) {
 			case 1: {
@@ -89,26 +90,68 @@ public class manClass {
 				continue;
 			}
 
+			// Cadastrando Alimento
 			case 2: {
-				// Cadastrando Alimento
 				System.out.println("Escreva o código do alimento: ");
-				alimento.setCodigo(sc.nextInt());
+				do {
+					if (sc.hasNextInt()) {
+						alimento.setCodigo(sc.nextInt());
+					} else {
+						System.out.println("Entrada inválida. Por favor, insira um número válido.");
+						sc.next();
+					}
+				} while (alimento.getCodigo() == 0);
 
-				System.out.println("Descrição do alimento: ");
-				alimento.setNome(sc.next());
+				do {
+					System.out.println("Nome do alimento: ");
+					if (sc.hasNext()) {
+						alimento.setNome(sc.next());
+					} else {
+						System.out.println("Entrada inválida. Por favor, insira um nome válido.");
+						sc.next();
+					}
+				} while (alimento.getNome() == null);
 
-				System.out.println("Escreva um alimento: ");
-				alimento.setDescricao(sc.next());
+				do {
+					System.out.println("Descrição: ");
+					if (sc.hasNext()) {
+						alimento.setDescricao(sc.next());
+					} else {
+						System.out.println("Entrada inválida. Tente novamente.");
+						sc.next();
+					}
+				} while (alimento.getDescricao() == null);
 
-				System.out.println("Escreva a quantidade: ");
-				alimento.setQuantidade(sc.nextInt());
+				do {
+					System.out.println("Quantidade: ");
+					if (sc.hasNextInt()) {
+						alimento.setQuantidade(sc.nextInt());
+					} else {
+						System.out.println("Entrada inválida. Tente novamente.");
+						sc.next();
+					}
+				} while (alimento.getQuantidade() == 0);
 
-				System.out.println("Escreva o preço: ");
-				alimento.setPreco(sc.nextDouble());
+				do {
+					System.out.println("Escreva o preço: ");					
+					if (sc.hasNextDouble()) {
+						alimento.setPreco(sc.nextDouble());
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (alimento.getPreco() == 0);
 
-				System.out.println("Escreva a data de validade: ");
-				alimento.setDataValidade((sc.next()));
-
+				do {
+					System.out.println("Escreva a data de validade: ");			
+					if (sc.hasNext()) {
+						alimento.setDataValidade((sc.next()));
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (alimento.getDataValidade() == null);
+				
 				// Gravando produto
 				alimento.gravaEstoque(alimento.getCodigo(), alimento.getNome(), alimento.getDescricao(),
 						alimento.getQuantidade(), alimento.getPreco());
@@ -118,27 +161,76 @@ public class manClass {
 
 			case 3: {
 				// Cadastrando Eletronico
+				
+				do {
+					System.out.println("Código do eletronico.");	
+					if (sc.hasNextInt()) {
+						eletronico.setCodigo(sc.nextInt());
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getCodigo() == 0);
+				
+				do {
+					System.out.print("Nome do eletronico: ");
+					if (sc.hasNext()) {
+						eletronico.setNome(sc.next());	
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getNome() == null);
+				
+				do {
+					System.out.print("Descrição do eletronico: ");
+					if (sc.hasNext()) {
+						eletronico.setDescricao(sc.next());	
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getDescricao() == null);
+				
+				do {
+					System.out.print("Quantidade do eletronico: ");
+					if (sc.hasNextInt()) {
+						eletronico.setQuantidade(sc.nextInt());						
+					} else {
+						System.out.println("Entrada inválida. Tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getQuantidade() == 0);
+				
+				do {
+					System.out.print("Preço do eletronico: ");
+					if (sc.hasNextDouble()) {
+						eletronico.setPreco(sc.nextDouble());		
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getPreco() == 0.0);
+				
+				do {
+					System.out.print("Marca do eletronico: ");
+					if (sc.hasNext()) {
+						eletronico.setMarca(sc.next());	
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getMarca() == null);
 
-				System.out.println("Código do eletronico.");
-				eletronico.setCodigo(sc.nextInt());
-
-				System.out.print("Nome do eletronico: ");
-				eletronico.setNome(sc.next());
-
-				System.out.print("Descrição do eletronico: ");
-				eletronico.setDescricao(sc.next());
-
-				System.out.print("Quantidade do eletronico: ");
-				eletronico.setQuantidade(sc.nextInt());
-
-				System.out.print("Preço do eletronico: ");
-				eletronico.setPreco(sc.nextDouble());
-
-				System.out.print("Marca do eletronico: ");
-				eletronico.setMarca(sc.next());
-
-				System.out.print("Modelo do eletronico: ");
-				eletronico.setModelo(sc.next());
+				do {
+					System.out.print("Modelo do eletronico: ");
+					if (sc.hasNext()) {
+						eletronico.setModelo(sc.next());
+					} else {
+						System.out.println("Entrada inválida. tente novamente");
+						sc.next();
+					}
+				} while (eletronico.getModelo() == null);
 
 				// Gravando produto
 				eletronico.gravaEstoque(eletronico.getCodigo(), eletronico.getNome(), eletronico.getDescricao(),

@@ -4,3 +4,8 @@ Código: 5, Nome: Pc, Descrição: Computador, Quantidade: 5, Preço: 1200.0
 Código: 50, Nome: Notebook, Descrição: Eletronico, Quantidade: 10, Preço: 2500.0, Marca: Samsung, Modelo: inspiron
 Código: 50, Nome: Celular, Descrição: eletronico, Quantidade: 50, Preço: 50.0
 Código: 50, Nome: Celular, Descrição: Eletronico, Quantidade: 5, Preço: 12500.0, Marca: Sansumg, Modelo: A30
+Código: 1, Nome: Celular, Descrição: AparelhoTelefonico, Quantidade: 5, Preço: 15.0
+Código: 55, Nome: Joia, Descrição: Joias, Quantidade: 5, Preço: 15.0
+Código: 55, Nome: Arroz, Descrição: Alimento, Quantidade: 10, Preço: 55.0, Data de Validade: 22/07/2023
+Código: 60, Nome: Celular, Descrição: Smartphone, Quantidade: 10, Preço: 5000.0, Marca: Iphone, Modelo: 15
+Código: 60, Nome: Celular, Descrição: Smarphone, Quantidade: 5, Preço: 6000.0, Marca: Iphone, Modelo: ProMax
